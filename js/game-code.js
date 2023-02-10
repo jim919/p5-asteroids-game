@@ -79,7 +79,7 @@
 			{
 				this.x = 0;
 				this.y = 0;
-				this.image = loadImage("game-assets/missile-pack-2.png");
+				this.image = loadImage("game-assets/blue-box-woood.png.png");
 				this.loadSound = createAudio("game-assets/load-missiles.wav");
 			}
 			
@@ -248,7 +248,7 @@
 			
 			constructor()
 			{
-				this.image = loadImage("game-assets/spaceship-2.png");
+				this.image = loadImage("game-assets/giphy.png");
 				this.engineSound = createAudio("game-assets/engine.wav");
 			}
 			
@@ -310,7 +310,7 @@
 				
 				for (let i = 0; i < this.livesLeft; i++)
 				{
-					let live = loadImage("game-assets/spaceship-miniature.png");
+					let live = loadImage("game-assets/pixelheart.png");
 					this.lives[i] = live;
 				}
 			}
@@ -361,11 +361,11 @@
 		*/
 		function preload() 
 		{
-			background = loadImage("game-assets/moon-bg.jpg");		// load the background-image
+			background = loadImage("game-assets/jm.jpeg");		// load the background-image
 			asteroidImage = loadImage("game-assets/asteroid-2.png"); // load once and the pass to Asteroid so that will not load each time an Asteroid is created
 			spaceship = new SpaceShip();
 			
-			missileImage = loadImage("game-assets/missile-2.png");
+			missileImage = loadImage("game-assets/Fantasy-Dagger-1.png");
 			missilePack = new MissilePack();
 		}
 		
@@ -505,7 +505,7 @@
 				text('Press N to start a new game.', 300, 300, 800, 200);
 				textSize(25);
 				text('Use the left and right arrows to avoid the asteroids.', 340, 360, 800, 200);
-				text('Get the missiles and fire by pressing the Space bar!', 340, 390, 800, 200);
+				text('Get the daggers and fire by pressing the Space bar!', 340, 390, 800, 200);
 			}
 			
 			if (gameOver)
