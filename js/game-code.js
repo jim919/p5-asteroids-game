@@ -372,7 +372,7 @@
 		function setup() 
 		{
 			spaceShipLives = new SpaceShipLives();
-			createCanvas(1200, 500); // canvas size tied to the background-image
+			createCanvas(1280, 591); // canvas size tied to the background-image
 			asteroidSwarm = new AsteroidSwarm(); // it is going to handle the asteroids
 		}
 		
