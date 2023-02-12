@@ -324,7 +324,7 @@
 			{
 				for (let i = 0; i < livesLeft; i++)
 				{
-					image(this.lives[i], (i*70+15), 40); // defining the position of displayed objects
+					image(this.lives[i], (i*70+10), 20); // defining the position of displayed objects
 				}
 			}
 			
