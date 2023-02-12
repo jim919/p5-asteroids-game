@@ -2,7 +2,7 @@ html {
 	background-color: black;
 }
 
-spaceship {
+#spaceship {
 	position:absolute;
 	left:300px; 
 	top:330px; 
