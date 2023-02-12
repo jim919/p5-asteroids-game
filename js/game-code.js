@@ -382,7 +382,7 @@
 				Checking game state, drawing our game's frames, getting input
 			*/
 			
-			image(background, 0, 0);
+			image(background, 500 800);
 			spaceship.display();
 			spaceShipLives.display();
 						
