@@ -79,7 +79,7 @@
 			{
 				this.x = 0;
 				this.y = 0;
-				this.image = loadImage("game-assets/blue-box-woood.png.png");
+				this.image = loadImage("game-assets/blue-box-woood.png");
 				this.loadSound = createAudio("game-assets/load-missiles.wav");
 			}
 			
@@ -324,7 +324,7 @@
 			{
 				for (let i = 0; i < livesLeft; i++)
 				{
-					image(this.lives[i], (i*40+10), 20); // defining the position of displayed objects
+					image(this.lives[i], (i*55+15), 20); // defining the position of displayed objects
 				}
 			}
 			
