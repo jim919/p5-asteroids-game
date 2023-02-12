@@ -249,7 +249,7 @@
 			constructor()
 			{
 				this.image = loadImage("game-assets/giphy.png");
-				this.engineSound = createAudio("game-assets/engine.wav");
+				this.engineSound = createAudio("game-assets/470897__zrte__man-breathing.wav");
 			}
 			
 			display()
