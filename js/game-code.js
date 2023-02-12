@@ -259,7 +259,7 @@
 			
 			move(move)
 			{
-				if (this.x > 500 && move < 0) // chech that will not get out of the left barrier
+				if (this.x > 40 && move < 0) // chech that will not get out of the left barrier
 				{
 					this.x += (move*10);
 				}
