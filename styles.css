@@ -2,9 +2,3 @@ html {
 	background-color: black;
 }
 
-#spaceship {
-	position:absolute;
-	left:300px; 
-	top:330px; 
-	height= 200px;
-}
