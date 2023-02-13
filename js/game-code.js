@@ -91,7 +91,7 @@
 					if ( xR == 1 )
 					{
 						console.log('Create a missile pack');
-						this.x = Math.floor(Math.random() * 1090); // random X position
+						this.x = Math.floor(Math.random() * 1270); // random X position
 						this.y = 0;
 						image(this.image, this.x, this.y++);
 					}
@@ -103,7 +103,7 @@
 				if (this.y > 0) // when a missilePack is created this.y is increased - so if a missilePack exists then it will be displayed
 				{
 					image(this.image, this.x, this.y+= 5);
-					if (this.y > 591) // pack is lost
+					if (this.y > 500) // pack is lost
 					{
 						this.y = 0;
 					}
