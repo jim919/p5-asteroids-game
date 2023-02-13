@@ -38,7 +38,7 @@
 			display() 
 			{
 				image(this.image, this.x, this.y+= this.asteroidSpeed); // each time an asteroid is displyed its position is updated (asteroids fall [y is increased])
-				if (this.y > 550) // asteroid is dissappeared and load() is called to load again the asteroid 
+				if (this.y > 591) // asteroid is dissappeared and load() is called to load again the asteroid 
 				{
 					this.load();
 					return true;
@@ -103,7 +103,7 @@
 				if (this.y > 0) // when a missilePack is created this.y is increased - so if a missilePack exists then it will be displayed
 				{
 					image(this.image, this.x, this.y+= 5);
-					if (this.y > 550) // pack is lost
+					if (this.y > 591) // pack is lost
 					{
 						this.y = 0;
 					}
@@ -113,7 +113,7 @@
 			checkForCollection(spaceship) // if a missilepack collides with the spaceship is collected
 			{
 				// taken by asteroid.checkForCollision() -- not very precise yet 
-				if (Math.abs(this.x - spaceship.x) < 50 && this.y >= 420 && this.y <= 550)
+				if (Math.abs(this.x - spaceship.x) < 50 && this.y >= 420 && this.y <= 590)
 				{
 					spaceship.addMissiles(3);
 					this.y = 0; // missilepack is taken - new missilePack may be created
@@ -264,7 +264,7 @@
 					this.x += (move*10);
 				}
 
-				if (this.x < 1090 && move > 0) // chech that will not get out of the right barrier
+				if (this.x < 1160 && move > 0) // chech that will not get out of the right barrier
 				{
 					this.x += (move*10);
 				}
