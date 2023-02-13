@@ -113,7 +113,7 @@
 			checkForCollection(spaceship) // if a missilepack collides with the spaceship is collected
 			{
 				// taken by asteroid.checkForCollision() -- not very precise yet 
-				if (Math.abs(this.x - spaceship.x) < 50 && this.y >= 420 && this.y <= 590)
+				if (Math.abs(this.x - spaceship.x) < 60 && this.y >= 420 && this.y <= 590)
 				{
 					spaceship.addMissiles(3);
 					this.y = 0; // missilepack is taken - new missilePack may be created
@@ -229,7 +229,7 @@
 				{
 					for (let z = 0; z < missiles.length; z++)
 					{
-						if (Math.abs(this.asteroids[i].x - missiles[z].x) < 40  && Math.abs(this.asteroids[i].y - missiles[z].y) < 20 )
+						if (Math.abs(this.asteroids[i].x - missiles[z].x) < 60  && Math.abs(this.asteroids[i].y - missiles[z].y) < 20 )
 						{
 							missiles[z].explode();
 							return this.asteroids[i].detonate();
