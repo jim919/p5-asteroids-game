@@ -27,7 +27,7 @@
 					Asteroids are re-used
 					When an asteroid falls of the screen (see if in display()) load() is called
 				*/
-				this.x = Math.floor(Math.random() * 1050); // random X position
+				this.x = Math.floor(Math.random() * 1270); // random X position
 				this.asteroidSpeed = Math.floor(Math.random() * (this.maxSpeed - this.minSpeed + 1) + this.minSpeed); // random speed between min and max speed
 				this.y = 0;
 				
@@ -91,7 +91,7 @@
 					if ( xR == 1 )
 					{
 						console.log('Create a missile pack');
-						this.x = Math.floor(Math.random() * 1050); // random X position
+						this.x = Math.floor(Math.random() * 1270); // random X position
 						this.y = 0;
 						image(this.image, this.x, this.y++);
 					}
