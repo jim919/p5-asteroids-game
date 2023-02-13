@@ -496,8 +496,6 @@
 			if (!startGame)
 				rect(280, 280, 680, 140); // rectangle (window) to show the message to start game
 				
-			if (gameOver)
-				rect(280, 220, 680, 200); // rectangle (window) to show the message game over and start game
 		
 			textSize(50);
 			if (!startGame) // provide instructions
