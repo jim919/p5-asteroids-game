@@ -491,7 +491,7 @@
 			textSize(30);
 			text("Score: " + asteroidSwarm.asteroidsPassed, 130, 135); // Score is shown
 			
-			text("Missiles: " + spaceship.missiles, 1000, 55); // Score is shown
+			text("Weapons: " + spaceship.missiles, 1000, 55); // Score is shown
 		
 			if (!startGame)
 				rect(280, 280, 680, 140); // rectangle (window) to show the message to start game
@@ -511,13 +511,13 @@
 			if (gameOver)
 			{
 				textSize(50);
-				text('Game over!', 500, 280);
+				text('You are done!', 500, 280);
 			}
 			
 			if (paused)
 			{
 				textSize(50);
-				text('Game paused!', 500, 280);
+				text('Game paused...', 500, 280);
 			}
 		}
 	
