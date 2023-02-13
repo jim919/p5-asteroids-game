@@ -91,7 +91,7 @@
 					if ( xR == 1 )
 					{
 						console.log('Create a missile pack');
-						this.x = Math.floor(Math.random() * 1270); // random X position
+						this.x = Math.floor(Math.random() * 1090); // random X position
 						this.y = 0;
 						image(this.image, this.x, this.y++);
 					}
