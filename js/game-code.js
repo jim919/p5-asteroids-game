@@ -511,7 +511,7 @@
 			if (gameOver)
 			{
 				textSize(50);
-				text('You are done!', 500, 280);
+				text('Game over!', 500, 280);
 			}
 			
 			if (paused)
