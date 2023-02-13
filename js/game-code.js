@@ -500,7 +500,7 @@
 				rect(280, 220, 680, 200); // rectangle (window) to show the message game over and start game
 		
 			textSize(50);
-			if (!startGame || gameOver) // provide instructions
+			if (!startGame) // provide instructions
 			{
 				text('Press N to start a new game.', 300, 300, 800, 200);
 				textSize(25);
@@ -511,7 +511,7 @@
 			if (gameOver)
 			{
 				textSize(50);
-				text('Game over!', 500, 280);
+				text('You are done!', 500, 280);
 			}
 			
 			if (paused)
