@@ -249,7 +249,7 @@
 			constructor()
 			{
 				this.image = loadImage("game-assets/giphy.png");
-				this.engineSound = createAudio("game-assets/engine.wav");
+				this.engineSound = createAudio("game-assets/night.wav");
 			}
 			
 			display()
