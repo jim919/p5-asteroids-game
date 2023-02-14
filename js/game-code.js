@@ -468,6 +468,16 @@
 					missiles.push(temp);
 			}
 			
+			if (keyIsDown(83))
+			{
+				Pd.start();
+			}
+			
+			if (keyIsDown(81))
+			{
+				Pd.send(‘Collision’,[]);
+			}
+			
 			if (keyCode == 78) // n is pressed - New game
 			{
 				startGame = true;
