@@ -371,6 +371,10 @@
 		
 		function setup() 
 		{
+			var patch
+			$.get(‘game.pd’, function(patchStr) {
+			patch = Pd.loadPatch(patchStr);
+			}
 			spaceShipLives = new SpaceShipLives();
 			createCanvas(1190, 591); // canvas size tied to the background-image
 			asteroidSwarm = new AsteroidSwarm(); // it is going to handle the asteroids
