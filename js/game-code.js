@@ -371,10 +371,6 @@
 		
 		function setup() 
 		{
-			var patch
-			$.get(‘game.pd’, function(patchStr) {
-			patch = Pd.loadPatch(patchStr);
-			}
 			spaceShipLives = new SpaceShipLives();
 			createCanvas(1190, 591); // canvas size tied to the background-image
 			asteroidSwarm = new AsteroidSwarm(); // it is going to handle the asteroids
@@ -468,16 +464,6 @@
 					missiles.push(temp);
 			}
 			
-			if (keyIsDown(83))
-			{
-				Pd.start();
-			}
-			
-			if (keyIsDown(81))
-			{
-				Pd.send(‘Collision’,[]);
-			}
-			
 			if (keyCode == 78) // n is pressed - New game
 			{
 				startGame = true;
@@ -531,5 +517,23 @@
 				textSize(50);
 				text('Game paused...', 500, 280);
 			}
-		}
 	
+	
+		function sendXHR(type, url, data, callback) {
+		var newXHR = new XMLHttpRequest() || new window.ActiveXObject("Microsoft.XMLHTTP");
+		newXHR.open(type, url, true);
+		newXHR.send(data);
+		newXHR.onreadystatechange = function() {
+			
+			if (this.status === 200 && this.readyState === 4) 
+			{
+				callback(this.response);
+			}
+		};
+	}
+	sendXHR("GET", ""C:\Users\Δημητρης Γιαν\OneDrive\Έγγραφα\GitHub\p5.asteroids\Pure-data\game.txt"", null, function(response) { // response contains the content of the description.txt file.
+	document.getElementById("description").innerHTML = response; // Use innerHTML to get or set the html content.
+});
+}
+
+
