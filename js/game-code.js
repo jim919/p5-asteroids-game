@@ -356,8 +356,6 @@
 		let missiles = [];
 		let missilePack;
 		
-		let gameSounds;
-		
 		/*
 			P5 functions preload(), setup(), draw() and keyPressed() are used
 		*/
@@ -369,12 +367,6 @@
 			
 			missileImage = loadImage("game-assets/Fantasy-Dagger-1.png");
 			missilePack = new MissilePack();
-			
-			gameSounds 
-				$.get('Pure-data/game.pd', function(patchStr) {
-				  gameSounds = Pd.loadPatch(patchStr);
-				
-			})
 		}
 		
 		function setup() 
@@ -398,7 +390,6 @@
 			
 			if (startGame && !gameOver && startOnce) // begin a new game
 			{
-				Pd.start();
 				asteroidSwarm.reset();
 				asteroidSwarm.addNewAsteroids(2);
 				spaceship.startEngineSound();
@@ -408,7 +399,6 @@
 			
 			if (gameOver) // game over
 			{
-				Pd.stop();
 				spaceship.stopEngineSound();
 				spaceship.missiles = 0;
 			}
@@ -487,18 +477,11 @@
 					paused = true;
 				else if (startGame && !gameOver && paused)
 					paused = false;
-				
-				if (paused)
-				{
-					Pd.stop();
-				}
-				
+					
 				if (paused)
 					spaceship.stopEngineSound();
 					
 				if (!paused)
-					{
-					Pd.start();
 					spaceship.startEngineSound();
 			}
 		}
